@@ -2,6 +2,7 @@ import '../App.css';
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import CategoryCard from '../components/CategoryCard'
+import PageHeader from '../components/PageHeader'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faRandom, faUsers } from '@fortawesome/free-solid-svg-icons'
 
@@ -20,14 +21,14 @@ function Categories(props) {
 
   return (
     <div className="App">
-      <React.Fragment>
-          <div>categories component</div>
-          <div className="categories__cardsWrapper">
-            {categories.map(category => (
-              <CategoryCard key={category.idCategory} category={category}></CategoryCard>
-            ))}
+          <PageHeader subheader="Categories" />
+          <div className="app__cardsWrapper">
+            <div className="app__cardsContainer">
+              {categories.map(category => (
+                <CategoryCard key={category.idCategory} category={category} history={props.history}></CategoryCard>
+              ))}
+            </div>
           </div>
-      </React.Fragment>
     </div>
   );
 }

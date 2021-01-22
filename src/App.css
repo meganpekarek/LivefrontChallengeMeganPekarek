@@ -7,6 +7,9 @@ html {
   --color-primary: #E7ECE6;
   --font-family-primary: 'Bebas Neue', cursive;
   --font-family-secondary: 'Poiret One', cursive;
+  --header-font-size: 5rem;
+  --subheader-font-size: 3rem;
+  --desktop-side-page-padding: 5rem;
   font-size: 62.5%;
 }
 
@@ -14,11 +17,17 @@ html {
   font-size: 1.6rem;
 }
 
-.categories__cardsWrapper {
+.app__cardsWrapper {
   display: flex;
   justify-content: center;
   background: var(--color-primary);
-  padding: 2rem;
+  padding: 2rem var(--desktop-side-page-padding);
+  margin: 3rem 0;
+}
+
+.app__cardsContainer {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 

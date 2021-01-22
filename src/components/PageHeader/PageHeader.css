@@ -1,0 +1,12 @@
+.page__header {
+    font-family: var(--font-family-primary);
+    font-size: var(--header-font-size);
+    padding: 0 var(--desktop-side-page-padding);
+    margin: 5rem 0;
+  }
+  
+  .page__subHeader {
+    font-family: var(--font-family-secondary);
+    font-size: var(--subheader-font-size);
+    padding: 0 var(--desktop-side-page-padding);
+  }

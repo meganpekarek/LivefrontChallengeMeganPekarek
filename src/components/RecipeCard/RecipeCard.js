@@ -1,13 +1,29 @@
 import './RecipeCard.css';
+import React from 'react'
 
 function RecipeCard(props) {
   const {recipe} = props;
 
+  const goToRecipe = () => {
+    props.history.push({
+      pathname: '/recipedetails',
+      state: {
+        recipe: recipe
+      }
+    })
+  }
+
   return (
     <div className="App">
       <React.Fragment>
-            <div className="recipeCard__wrapper">
-            </div>
+        <div className="recipeCard__wrapper" onClick={goToRecipe}>
+          <div className="recipeCard__imgWrapper">
+            <img className="recipeCard__img" src={recipe.strMealThumb} alt="recipe-cover" />
+          </div>
+          <div>
+            <header className="recipeCard__header">{recipe.strMeal}</header>
+          </div>
+        </div>
       </React.Fragment>
     </div>
   );
