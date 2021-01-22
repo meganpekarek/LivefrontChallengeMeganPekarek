@@ -11,7 +11,6 @@ function Recipes(props) {
   const [recipes, setRecipes] = useState([]);
 
   let categoryName = ""
-  debugger
   if(props.location.state) {
     categoryName = props.location.state.category.strCategory;
     localStorage.setItem('category', JSON.stringify(props.location.state.category));
