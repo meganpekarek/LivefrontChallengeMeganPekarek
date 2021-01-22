@@ -1,8 +1,5 @@
 import '../App.css';
-import React, { useEffect } from 'react'
-import axios from 'axios'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faRandom, faUsers } from '@fortawesome/free-solid-svg-icons'
+import React from 'react'
 
 function RecipeDetails() {
 

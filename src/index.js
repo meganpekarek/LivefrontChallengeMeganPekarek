@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import Categories from './views/Categories'
 import Recipes from './views/Recipes'
 import RecipeDetails from './views/RecipeDetails'

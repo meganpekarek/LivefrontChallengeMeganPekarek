@@ -1,10 +1,11 @@
 import '../App.css';
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import CategoryCard from '../components/CategoryCard'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faRandom, faUsers } from '@fortawesome/free-solid-svg-icons'
 
-function Categories() {
+function Categories(props) {
 
   const [categories, setCategories] = useState([]);
 
@@ -21,12 +22,11 @@ function Categories() {
     <div className="App">
       <React.Fragment>
           <div>categories component</div>
-          <ol>
+          <div className="categories__cardsWrapper">
             {categories.map(category => (
-              <li key={category.idCategory}>{category.strCategory}</li>
+              <CategoryCard key={category.idCategory} category={category}></CategoryCard>
             ))}
-          </ol>
-          <img src="https://www.themealdb.com/images/category/beef.png"/>
+          </div>
       </React.Fragment>
     </div>
   );
