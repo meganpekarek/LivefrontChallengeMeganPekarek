@@ -9,4 +9,5 @@
     font-family: var(--font-family-secondary);
     font-size: var(--subheader-font-size);
     padding: 0 var(--desktop-side-page-padding);
+    font-weight: 700;
   }
