@@ -1,29 +1,21 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import Adapter from 'enzyme-adapter-react-16';
+import {shallow, configure} from 'enzyme';
 import CategoryCard from './CategoryCard';
 
-test('Card color changes on hover', () => {
-  const categoryObj = {
-      strCategory: 'testCat',
-      strCategoryDescription: 'description of testCat',
-      strCategoryThumb: 'https://www.themealdb.com/images/media/meals/wrssvt1511556563.jpg'
+configure({adapter: new Adapter()});
+test('Category card is displaying correct title', () => {
+  // Render a checkbox with label in the document
+
+  const category = {
+    strCategory: "test category",
+    strCategoryDescription: "test category description",
+    strCategoryThumb: "https://www.themealdb.com/images/media/meals/svprys1511176755.jpg"
   }
-  const component = renderer.create(
-    <CategoryCard category={categoryObj}></CategoryCard>,
-  );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
 
-  // manually trigger the callback
-  console.log(tree)
-  tree.props.onClick();
-  // re-rendering
-  tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const categoryCard = shallow(<CategoryCard category={category} />);
 
-  // manually trigger the callback
-  tree.props.onMouseLeave();
-  // re-rendering
-  tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(categoryCard.find('.categoryCard__header').text()).toEqual('test category');
+
+  expect(categoryCard.find('.categoryCard__desc').text()).toEqual('test category description');
 });
