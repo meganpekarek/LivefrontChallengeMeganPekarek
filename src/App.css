@@ -4,6 +4,7 @@
 html {
   --color-text: black;
   --color-background: white;
+  --color-background-hover: #F1F1F1;
   --color-primary: #E7ECE6;
   --font-family-primary: 'Bebas Neue', cursive;
   --font-family-secondary: 'Poiret One', cursive;
@@ -11,6 +12,12 @@ html {
   --subheader-font-size: 3rem;
   --desktop-side-page-padding: 7rem;
   font-size: 62.5%;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    --desktop-side-page-padding: 4rem;
+  }
 }
 
 .App {
@@ -30,9 +37,14 @@ html {
 }
 
 .app__cardsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-gap: 6rem;
+  margin: 4rem 0;
+  width: 100%;
 }
 
 .recipeDetails__headerWrapper {
