@@ -9,14 +9,20 @@ html {
   --font-family-primary: 'Bebas Neue', cursive;
   --font-family-secondary: 'Poiret One', cursive;
   --header-font-size: 5rem;
+  --header-y-padding: 5rem;
   --subheader-font-size: 3rem;
-  --desktop-side-page-padding: 7rem;
+  --side-page-padding: 7rem;
+  --back-arrow-width: 2rem;
   font-size: 62.5%;
 }
 
 @media only screen and (max-width: 600px) {
   html {
-    --desktop-side-page-padding: 4rem;
+    --side-page-padding: 4rem;
+    --header-font-size: 3rem;
+    --header-y-padding: 3rem;
+    --subheader-font-size: 2rem;
+    --back-arrow-width: 1rem;
   }
 }
 
@@ -26,13 +32,14 @@ html {
 
 .backArrow {
   cursor: pointer;
+  width: var(--back-arrow-width);
 }
 
 .app__cardsWrapper {
   display: flex;
   justify-content: center;
   background: var(--color-primary);
-  padding: 2rem var(--desktop-side-page-padding);
+  padding: 2rem var(--side-page-padding);
   margin: 3rem 0;
 }
 
@@ -49,7 +56,7 @@ html {
 
 .recipeDetails__headerWrapper {
   background: var(--color-primary);
-  padding: 4rem var(--desktop-side-page-padding);
+  padding: 4rem var(--side-page-padding);
   margin: 5% 0;
   display: flex;
   align-items: center;
@@ -65,7 +72,7 @@ html {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 2rem var(--desktop-side-page-padding);
+  padding: 2rem var(--side-page-padding);
 }
 
 .recipeDetails__recipeContent {
@@ -107,4 +114,3 @@ html {
   border-radius: .6rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px;
 }
-

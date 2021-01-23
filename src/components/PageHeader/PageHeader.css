@@ -1,13 +1,13 @@
 .page__header {
     font-family: var(--font-family-primary);
     font-size: var(--header-font-size);
-    padding: 0 var(--desktop-side-page-padding);
-    margin: 5rem 0;
+    padding: 0 var(--side-page-padding);
+    margin: var(--header-y-padding) 0;
   }
   
   .page__subHeader {
     font-family: var(--font-family-secondary);
     font-size: var(--subheader-font-size);
-    padding: 0 var(--desktop-side-page-padding);
+    padding: 0 var(--side-page-padding);
     font-weight: 700;
   }

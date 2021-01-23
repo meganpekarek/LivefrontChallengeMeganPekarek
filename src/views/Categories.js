@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import CategoryCard from '../components/CategoryCard'
 import PageHeader from '../components/PageHeader'
+
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faRandom, faUsers } from '@fortawesome/free-solid-svg-icons'
 

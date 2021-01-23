@@ -12,6 +12,10 @@
     cursor: pointer;
 }
 
+.recipeCard__wrapper:hover {
+    background: var(--color-background-hover);
+}
+
 .recipeCard__header {
     font-family: var(--font-family-primary);
     text-align: center;
