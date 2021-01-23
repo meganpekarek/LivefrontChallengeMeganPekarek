@@ -1,13 +1,32 @@
-.page__header {
+.page__headerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.page__headerText {
     font-family: var(--font-family-primary);
     font-size: var(--header-font-size);
     padding: 0 var(--side-page-padding);
     margin: var(--header-y-padding) 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
   }
   
   .page__subHeader {
     font-family: var(--font-family-secondary);
     font-size: var(--subheader-font-size);
-    padding: 0 var(--side-page-padding);
+    padding: 3rem var(--side-page-padding);
     font-weight: 700;
+    width: 100%;
+    text-align: center;
+    background: var(--color-secondary);
+  }
+
+  .page__headerLogo {
+    width: 5rem;
+    margin: 0 .8rem;
   }

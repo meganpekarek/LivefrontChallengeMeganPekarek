@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&display=swap');
 
 html {
   --color-text: black;
   --color-background: white;
   --color-background-hover: #F1F1F1;
   --color-primary: #E7ECE6;
+  --color-secondary: #F3F6F2;
   --font-family-primary: 'Bebas Neue', cursive;
-  --font-family-secondary: 'Poiret One', cursive;
-  --header-font-size: 5rem;
+  /* --font-family-secondary: 'Poiret One', cursive; */
+  --font-family-secondary: 'Rokkitt', serif;
+  --header-font-size: 7rem;
   --header-y-padding: 5rem;
-  --subheader-font-size: 3rem;
+  --subheader-font-size: 2.5rem;
   --side-page-padding: 7rem;
   --back-arrow-width: 2rem;
   font-size: 62.5%;
@@ -19,7 +22,7 @@ html {
 @media only screen and (max-width: 600px) {
   html {
     --side-page-padding: 4rem;
-    --header-font-size: 3rem;
+    --header-font-size: 5rem;
     --header-y-padding: 3rem;
     --subheader-font-size: 2rem;
     --back-arrow-width: 1rem;
@@ -40,7 +43,7 @@ html {
   justify-content: center;
   background: var(--color-primary);
   padding: 2rem var(--side-page-padding);
-  margin: 3rem 0;
+  margin-bottom: 3rem;
 }
 
 .app__cardsContainer {

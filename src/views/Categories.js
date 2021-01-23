@@ -22,7 +22,7 @@ function Categories(props) {
 
   return (
     <div className="App">
-          <PageHeader subheader="Categories" />
+          <PageHeader subheader="Categories" history={props.history} />
           <div className="app__cardsWrapper">
             <div className="app__cardsContainer">
               {categories.map(category => (

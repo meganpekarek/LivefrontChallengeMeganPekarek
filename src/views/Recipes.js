@@ -33,7 +33,7 @@ function Recipes(props) {
 
   return (
     <div className="App">
-          <PageHeader subheader={subheader} />
+          <PageHeader subheader={subheader} history={props.history} />
           <div className="app__cardsWrapper">
             <div className="app__cardsContainer">
               {recipes.map(recipe => (
