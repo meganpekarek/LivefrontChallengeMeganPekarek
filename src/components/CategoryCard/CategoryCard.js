@@ -15,15 +15,14 @@ function CategoryCard(props) {
 
   return (
       <React.Fragment>
-            <div className="categoryCard__wrapper" onClick={goToRecipes}>
-              <div className="categoryCard__imgWrapper">
-                <img className="categoryCard__img" src={category.strCategoryThumb} alt="food-category" />
-              </div>
-              <div>
-                <header className="categoryCard__header">{category.strCategory}</header>
-                <p className="categoryCard__desc">{category.strCategoryDescription}</p>
-              </div>
-            </div>
+        <div className="categoryCard__wrapper" onClick={goToRecipes}>
+          <div className="categoryCard__imgWrapper">
+            <img className="categoryCard__img" src={category.strCategoryThumb} alt="food-category" />
+          </div>
+          <div>
+            <header className="categoryCard__header">{category.strCategory}</header>
+          </div>
+        </div>
       </React.Fragment>
   );
 }

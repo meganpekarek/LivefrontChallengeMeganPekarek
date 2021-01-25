@@ -26,7 +26,7 @@ function Recipes(props) {
         console.log(res);
         setRecipes(res.data.meals);
       })
-  }, []);
+  });
 
   let subheader = categoryName + ' Recipes'
 

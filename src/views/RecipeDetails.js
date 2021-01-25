@@ -22,7 +22,7 @@ function RecipeDetails(props) {
         console.log(res);
         setRecipe(res.data.meals[0]);
       })
-  }, []);
+  });
 
   let ingredients = [];
   let measurements = [];
@@ -49,7 +49,7 @@ function RecipeDetails(props) {
     <div className="App">
       <React.Fragment>
           <section className="recipeDetails__headerWrapper">
-            <img className="backArrow" src={BackArrow} onClick={goBack} />
+            <img className="backArrow" src={BackArrow} onClick={goBack} alt="back-arrow" />
             <header className="recipeDetails__headerText">{recipe.strMeal}</header>
           </section>
           <section className="recipeDetails__contentWrapper">

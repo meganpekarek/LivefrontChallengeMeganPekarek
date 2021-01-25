@@ -18,21 +18,8 @@
 .categoryCard__header {
     font-family: var(--font-family-primary);
     text-align: center;
+    font-size: 2rem;
 }
-
-.categoryCard__desc {
-    font-family: var(--font-family-secondary);
-    font-weight: 700;
-    font-size: 1.4rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* .categoryCard__wrapper:hover {
-    height: auto;
-    white-space: unset;
-} */
 
 .categoryCard__imgWrapper {
     display: flex;
@@ -40,5 +27,9 @@
 }
 
 .categoryCard__img {
+    width: 14rem;
+}
+
+.categoryCard__imgLoaderWrapper {
     width: 12rem;
 }
