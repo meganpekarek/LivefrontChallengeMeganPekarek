@@ -1,0 +1,23 @@
+.cardLoader__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: .4rem;
+    padding: 2rem;
+    background: var(--color-background);
+    width: 20rem;
+    height: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px;
+    cursor: pointer;
+}
+
+.cardLoader__header {
+    font-family: var(--font-family-primary);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.cardLoader__imgWrapper {
+    display: flex;
+    justify-content: center;
+}

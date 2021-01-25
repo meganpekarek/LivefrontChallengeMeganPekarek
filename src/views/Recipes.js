@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import RecipeCard from '../components/RecipeCard'
 import PageHeader from '../components/PageHeader'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faRandom, faUsers } from '@fortawesome/free-solid-svg-icons'
+import CardLoader from '../components/CardLoader'
 
 function Recipes(props) {
 
   const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   let categoryName = ""
   if(props.location.state) {
@@ -22,23 +22,29 @@ function Recipes(props) {
   useEffect(() => {
     axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=` + categoryName)
       .then(res => {
-        console.log('RESPONSE');
-        console.log(res);
         setRecipes(res.data.meals);
+        setLoading(false);
       })
   });
 
   let subheader = categoryName + ' Recipes'
 
+  const loadingCardCount = 8;
+  let cards = ([...Array(loadingCardCount)].map((e, i) => <CardLoader key={i} />));
+  if(!loading) {
+    cards = (
+      recipes.map(recipe => (
+        <RecipeCard key={recipe.idMeal} recipe={recipe}  history={props.history}></RecipeCard>
+      ))
+    )
+  }
 
   return (
     <div className="App">
           <PageHeader subheader={subheader} history={props.history} />
           <div className="app__cardsWrapper">
             <div className="app__cardsContainer">
-              {recipes.map(recipe => (
-                <RecipeCard key={recipe.idMeal} recipe={recipe}  history={props.history}></RecipeCard>
-              ))}
+              {cards}
             </div>
           </div>
     </div>
