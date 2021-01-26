@@ -23,7 +23,7 @@ function RecipeDetails(props) {
         setRecipe(res.data.meals[0]);
         setLoading(false);
       })
-  });
+  }, [mealId]);
 
   let ingredients = [];
   let measurements = [];

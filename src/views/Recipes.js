@@ -29,7 +29,7 @@ function Recipes(props) {
         setRecipes(res.data.meals);
         setLoading(false);
       })
-  });
+  }, [queryType, selectionName]);
 
   let subheader = selectionName + ' Recipes'
 
