@@ -10,33 +10,41 @@ function Recipes(props) {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  let categoryName = ""
+  let selectionName = ""
+  let queryType = ""
   if(props.location.state) {
-    categoryName = props.location.state.category.strCategory;
-    localStorage.setItem('category', JSON.stringify(props.location.state.category));
+    selectionName = props.location.state.selection;
+    queryType = props.location.state.queryParamType;
+    localStorage.setItem('selection', JSON.stringify(props.location.state.selection));
+    localStorage.setItem('queryType', JSON.stringify(props.location.state.queryParamType));
   } else {
-    categoryName = JSON.parse(localStorage.getItem('category')).strCategory;
+    selectionName = JSON.parse(localStorage.getItem('selection'));
+    queryType = JSON.parse(localStorage.getItem('queryType'));
   }
    
 
   useEffect(() => {
-    axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=` + categoryName)
+    axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?` + queryType + selectionName)
       .then(res => {
         setRecipes(res.data.meals);
         setLoading(false);
       })
   });
 
-  let subheader = categoryName + ' Recipes'
+  let subheader = selectionName + ' Recipes'
 
   const loadingCardCount = 8;
   let cards = ([...Array(loadingCardCount)].map((e, i) => <RecipeCardLoader key={i} />));
   if(!loading) {
-    cards = (
-      recipes.map(recipe => (
-        <RecipeCard key={recipe.idMeal} recipe={recipe}  history={props.history}></RecipeCard>
-      ))
-    )
+    if(recipes && recipes.length > 0) {
+      cards = (
+        recipes.map(recipe => (
+          <RecipeCard key={recipe.idMeal} recipe={recipe}  history={props.history}></RecipeCard>
+        ))
+      )
+    } else {
+      cards = <span className="app__infoSpan">No recipes found for your selection</span>
+    }
   }
 
   return (

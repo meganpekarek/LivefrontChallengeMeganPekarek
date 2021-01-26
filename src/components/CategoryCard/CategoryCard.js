@@ -8,7 +8,8 @@ function CategoryCard(props) {
     props.history.push({
       pathname: '/recipes',
       state: {
-        category: category
+        selection: category.strCategory,
+        queryParamType: "c="
       }
     })
   }

@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Categories from './views/Categories'
+import ByIngredient from './views/ByIngredient'
+import ByRegion from './views/ByRegion'
 import Recipes from './views/Recipes'
 import RecipeDetails from './views/RecipeDetails'
 import { Route, Switch, HashRouter as Router } from 'react-router-dom'
@@ -12,6 +14,8 @@ const routing = (
     <div className="app__wrapper">
       <Switch>
         <Route exact path="/" component={Categories} />
+        <Route path="/byingredient" component={ByIngredient} />
+        <Route path="/byregion" component={ByRegion} />
         <Route path="/recipes" component={Recipes} />
         <Route path="/recipedetails" component={RecipeDetails} />
       </Switch>

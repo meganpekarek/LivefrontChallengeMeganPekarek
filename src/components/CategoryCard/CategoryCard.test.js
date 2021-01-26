@@ -16,6 +16,4 @@ test('Category card is displaying correct title', () => {
   const categoryCard = shallow(<CategoryCard category={category} />);
 
   expect(categoryCard.find('.categoryCard__header').text()).toEqual('test category');
-
-  expect(categoryCard.find('.categoryCard__desc').text()).toEqual('test category description');
 });
