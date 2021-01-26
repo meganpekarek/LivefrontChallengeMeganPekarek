@@ -18,7 +18,7 @@
 .categoryCard__header {
     font-family: var(--font-family-primary);
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .categoryCard__imgWrapper {
