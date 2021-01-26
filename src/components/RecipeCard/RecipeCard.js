@@ -17,10 +17,8 @@ function RecipeCard(props) {
     <div className="App">
       <React.Fragment>
         <div className="recipeCard__wrapper" onClick={goToRecipe}>
-          <div className="recipeCard__imgWrapper">
-            <img className="recipeCard__img" src={recipe.strMealThumb} alt="recipe-cover" />
-          </div>
-          <div>
+          <img className="recipeCard__img" src={recipe.strMealThumb} alt="recipe-cover" />
+          <div className="recipeCard__headerWrapper">
             <header className="recipeCard__header">{recipe.strMeal}</header>
           </div>
         </div>
