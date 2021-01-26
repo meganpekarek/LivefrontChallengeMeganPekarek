@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import TextCard from '../components/TextCard'
 import PageHeader from '../components/PageHeader'
-import CategoryCardLoader from '../components/CategoryCardLoader'
+import TextCardLoader from '../components/TextCardLoader'
 
 function ByIngredient(props) {
 
@@ -18,23 +18,28 @@ function ByIngredient(props) {
             })
     }, []);
 
-    let sortedIngredients = ingredients.sort((a, b) => {
-        var ingA = a.strIngredient.toUpperCase();
-        var ingB = b.strIngredient.toUpperCase();
-        if (ingA < ingB) {
-            return -1;
-        }
-        if (ingA > ingB) {
-            return 1;
-        }
-        return 0;
-    });
+    const loadingCardCount = 16;
+    let cards = ([...Array(loadingCardCount)].map((e, i) => <TextCardLoader key={i} />));
 
-    let cards = (
-        sortedIngredients.map(ingredient => (
-            <TextCard key={ingredient.idIngredient} cardText={ingredient.strIngredient} queryParamType="i=" history={props.history}></TextCard>
-        ))
-    );
+    if(!loading) {
+        let sortedIngredients = ingredients.sort((a, b) => {
+            var ingA = a.strIngredient.toUpperCase();
+            var ingB = b.strIngredient.toUpperCase();
+            if (ingA < ingB) {
+                return -1;
+            }
+            if (ingA > ingB) {
+                return 1;
+            }
+            return 0;
+        });
+    
+        cards = (
+            sortedIngredients.map(ingredient => (
+                <TextCard key={ingredient.idIngredient} cardText={ingredient.strIngredient} queryParamType="i=" history={props.history}></TextCard>
+            ))
+        );
+    }
 
     return (
         <div className="App">
