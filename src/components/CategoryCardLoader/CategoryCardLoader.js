@@ -1,21 +1,21 @@
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import React from 'react'
-import './CardLoader.css';
+import './CategoryCardLoader.css';
 
-function CardLoader() {
+function CategoryCardLoader() {
 
     return (
         <SkeletonTheme color="white" highlightColor="lightgrey">
-            <div className="cardLoader__wrapper">
-                <div className="cardLoader__imgWrapper">
+            <div className="categoryCardLoader__wrapper">
+                <div className="categoryCardLoader__imgWrapper">
                     <Skeleton circle={true} height={70} width={70} />
                 </div>
                 <div>
-                    <Skeleton className="cardLoader__header" />
+                    <Skeleton className="categoryCardLoader__header" />
                 </div>
             </div>
         </SkeletonTheme>
     );
 }
 
-export default CardLoader;
+export default CategoryCardLoader;

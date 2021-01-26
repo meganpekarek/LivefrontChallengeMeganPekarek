@@ -1,4 +1,4 @@
-.cardLoader__wrapper {
+.recipeCardLoader__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -11,13 +11,13 @@
     cursor: pointer;
 }
 
-.cardLoader__header {
+.recipeCardLoader__header {
     font-family: var(--font-family-primary);
     text-align: center;
     font-size: 2rem;
 }
 
-.cardLoader__imgWrapper {
+.recipeCardLoader__imgWrapper {
     display: flex;
     justify-content: center;
 }

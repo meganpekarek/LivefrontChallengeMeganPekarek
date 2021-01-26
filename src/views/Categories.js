@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import CategoryCard from '../components/CategoryCard'
 import PageHeader from '../components/PageHeader'
-import CardLoader from '../components/CardLoader'
+import CategoryCardLoader from '../components/CategoryCardLoader'
 
 function Categories(props) {
 
@@ -19,7 +19,7 @@ function Categories(props) {
   }, []);
 
   const loadingCardCount = 8;
-  let cards = ([...Array(loadingCardCount)].map((e, i) => <CardLoader key={i} />));
+  let cards = ([...Array(loadingCardCount)].map((e, i) => <CategoryCardLoader key={i} />));
   if(!loading) {
     cards = (
         categories.map(category => (
