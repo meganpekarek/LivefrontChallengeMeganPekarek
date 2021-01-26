@@ -1,9 +1,8 @@
 .recipeCardLoader__wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-end;
     border-radius: .4rem;
-    padding: 2rem;
     background: var(--color-background);
     width: 20rem;
     height: 20rem;
@@ -15,9 +14,6 @@
     font-family: var(--font-family-primary);
     text-align: center;
     font-size: 2rem;
-}
-
-.recipeCardLoader__imgWrapper {
-    display: flex;
-    justify-content: center;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
 }

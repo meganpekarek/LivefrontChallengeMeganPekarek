@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import RecipeCard from '../components/RecipeCard'
 import PageHeader from '../components/PageHeader'
-import CategoryCardLoader from '../components/CategoryCardLoader'
+import RecipeCardLoader from '../components/RecipeCardLoader'
 
 function Recipes(props) {
 
@@ -30,7 +30,7 @@ function Recipes(props) {
   let subheader = categoryName + ' Recipes'
 
   const loadingCardCount = 8;
-  let cards = ([...Array(loadingCardCount)].map((e, i) => <CategoryCardLoader key={i} />));
+  let cards = ([...Array(loadingCardCount)].map((e, i) => <RecipeCardLoader key={i} />));
   if(!loading) {
     cards = (
       recipes.map(recipe => (
