@@ -2,10 +2,12 @@ import '../App.css';
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import BackArrow from '../images/backArrow.svg'
+import RecipeDetailsLoader from '../components/RecipeDetailsLoader';
 
 function RecipeDetails(props) {
 
-  const [recipe, setRecipe] = useState({})
+  const [recipe, setRecipe] = useState({});
+  const [loading, setLoading] = useState(true);
 
   let mealId = ""
   if(props.location.state) {
@@ -18,9 +20,8 @@ function RecipeDetails(props) {
   useEffect(() => {
     axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=` + mealId)
       .then(res => {
-        console.log('RESPONSE');
-        console.log(res);
         setRecipe(res.data.meals[0]);
+        setLoading(false);
       })
   });
 
@@ -47,7 +48,11 @@ function RecipeDetails(props) {
 
   return (
     <div className="App">
-      <React.Fragment>
+      {loading && (
+        <RecipeDetailsLoader />
+      )}
+      {!loading && (
+        <React.Fragment>
           <section className="recipeDetails__headerWrapper">
             <img className="backArrow" src={BackArrow} onClick={goBack} alt="back-arrow" />
             <header className="recipeDetails__headerText">{recipe.strMeal}</header>
@@ -55,7 +60,7 @@ function RecipeDetails(props) {
           <section className="recipeDetails__contentWrapper">
             <div className="recipeDetails__recipeContent">
               <span className="recipeDetails__recipeContentHeader">Ingredients</span>
-              <hr className="recipeDetails__contentSeparator"/>
+              <hr className="recipeDetails__contentSeparator" />
               <ul className="recipeDetails__ingredientsList">
                 {ingredientsList.map(item => (
                   <li key={item}>{item}</li>
@@ -64,14 +69,15 @@ function RecipeDetails(props) {
             </div>
             <div className="recipeDetails__recipeContent">
               <span className="recipeDetails__recipeContentHeader">Instructions</span>
-              <hr className="recipeDetails__contentSeparator"/>
+              <hr className="recipeDetails__contentSeparator" />
               <p className="recipeDetails__instructionsText">
                 {recipe.strInstructions}
               </p>
             </div>
             <img className="recipeDetails__mealImage" src={recipe.strMealThumb} alt="recipe-cover" />
           </section>
-      </React.Fragment>
+        </React.Fragment>
+      )}
     </div>
   );
 }
