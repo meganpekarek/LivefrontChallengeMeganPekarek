@@ -13,8 +13,6 @@ function ByIngredient(props) {
     useEffect(() => {
         axios.get(`https://www.themealdb.com/api/json/v1/1/list.php?i=list`)
             .then(res => {
-                console.log('RESPONES');
-                console.log(res);
                 setIngredients(res.data.meals);
                 setLoading(false);
             })

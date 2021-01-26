@@ -6,11 +6,6 @@ import Logo from '../../images/myMealLogo.svg'
 function PageHeader(props) {
 
   let loc = useLocation();
-  console.log(loc)
-
-  const [categoriesActive, setCategoriesActive] = useState(false);
-  const [ingredientsActive, setIngredientsActive] = useState(false);
-  const [regionsActive, setRegionsActive] = useState(false);
   let [activeFilter, setActiveFilter] = useState('');
 
   useEffect(() => {
@@ -21,7 +16,7 @@ function PageHeader(props) {
     } else if (loc.pathname === '/byregion') {
       setActiveFilter('regions')
     }
-  })
+  }, [loc.pathname])
 
   const goToFilter = (filter) => {
     props.history.push(filter);

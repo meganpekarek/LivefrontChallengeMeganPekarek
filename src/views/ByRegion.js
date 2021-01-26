@@ -13,8 +13,6 @@ function ByRegion(props) {
   useEffect(() => {
     axios.get(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`)
       .then(res => {
-        console.log('RESPONES');
-        console.log(res);
         setRegions(res.data.meals);
         setLoading(false);
       })
