@@ -44,4 +44,9 @@
 
 .page__filterOption {
   margin: 0 2em;
+  cursor: pointer;
+}
+
+.page__filterActive {
+  text-decoration: underline;
 }
