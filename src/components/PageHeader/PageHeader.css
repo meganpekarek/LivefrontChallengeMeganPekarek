@@ -45,6 +45,7 @@
 .page__filterOption {
   margin: 0 2em;
   cursor: pointer;
+  text-align: center;
 }
 
 .page__filterActive {
