@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/LivefrontChallengeMeganPekarek/static/css/main.6eb98b5f.chunk.css",
+    "main.js": "/LivefrontChallengeMeganPekarek/static/js/main.d3ab6738.chunk.js",
+    "main.js.map": "/LivefrontChallengeMeganPekarek/static/js/main.d3ab6738.chunk.js.map",
+    "runtime-main.js": "/LivefrontChallengeMeganPekarek/static/js/runtime-main.c06ac6d1.js",
+    "runtime-main.js.map": "/LivefrontChallengeMeganPekarek/static/js/runtime-main.c06ac6d1.js.map",
+    "static/js/2.209bb9af.chunk.js": "/LivefrontChallengeMeganPekarek/static/js/2.209bb9af.chunk.js",
+    "static/js/2.209bb9af.chunk.js.map": "/LivefrontChallengeMeganPekarek/static/js/2.209bb9af.chunk.js.map",
+    "static/js/3.c74085fa.chunk.js": "/LivefrontChallengeMeganPekarek/static/js/3.c74085fa.chunk.js",
+    "static/js/3.c74085fa.chunk.js.map": "/LivefrontChallengeMeganPekarek/static/js/3.c74085fa.chunk.js.map",
+    "index.html": "/LivefrontChallengeMeganPekarek/index.html",
+    "static/css/main.6eb98b5f.chunk.css.map": "/LivefrontChallengeMeganPekarek/static/css/main.6eb98b5f.chunk.css.map",
+    "static/js/2.209bb9af.chunk.js.LICENSE.txt": "/LivefrontChallengeMeganPekarek/static/js/2.209bb9af.chunk.js.LICENSE.txt",
+    "static/media/backArrow.dfac1a3f.svg": "/LivefrontChallengeMeganPekarek/static/media/backArrow.dfac1a3f.svg",
+    "static/media/myMealLogo.52903069.svg": "/LivefrontChallengeMeganPekarek/static/media/myMealLogo.52903069.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c06ac6d1.js",
+    "static/js/2.209bb9af.chunk.js",
+    "static/css/main.6eb98b5f.chunk.css",
+    "static/js/main.d3ab6738.chunk.js"
+  ]
+}
