@@ -4,6 +4,13 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  position: relative;
+}
+
+.page__backArrow {
+  position: absolute;
+  top: 20%;
+  left: 5%;
 }
 
 .page__headerText {
