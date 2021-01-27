@@ -5,15 +5,17 @@ import RecipeCard from './RecipeCard';
 
 configure({adapter: new Adapter()});
 
-test('Recipe Card renders with proper recipe name and image', () => {
+describe('RecipeCard', () => {
+  it('renders with proper recipe name and image', () => {
 
-  const recipe = {
-    strMeal: "test meal",
-    strMealThumb: "https://www.themealdb.com/images/media/meals/svprys1511176755.jpg"
-  }
-
-  const recipeCard = shallow(<RecipeCard recipe={recipe} />);
-
-  expect(recipeCard.find(".recipeCard__header").text()).toEqual('test meal');
-  expect(recipeCard.find("img").prop("src")).toEqual('https://www.themealdb.com/images/media/meals/svprys1511176755.jpg');
+    const recipe = {
+      strMeal: "test meal",
+      strMealThumb: "https://www.themealdb.com/images/media/meals/svprys1511176755.jpg"
+    }
+  
+    const recipeCard = shallow(<RecipeCard recipe={recipe} />);
+  
+    expect(recipeCard.find(".recipeCard__header").text()).toEqual('test meal');
+    expect(recipeCard.find("img").prop("src")).toEqual('https://www.themealdb.com/images/media/meals/svprys1511176755.jpg');
+  });
 });

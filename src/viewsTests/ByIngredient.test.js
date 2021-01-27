@@ -4,9 +4,19 @@ import {shallow, configure} from 'enzyme';
 import ByIngredient from '../views/ByIngredient';
 
 configure({adapter: new Adapter()});
-test('ByIngredient view displays properly', () => {
 
-  const byIngredient = shallow(<ByIngredient />);
+// jest.mock("react", () => ({
+//   ...jest.requireActual("react"),
+//   useState: () => ({
+//     ingredients: []
+//   })
+// }));
 
-  expect(byIngredient.find('.app__cardsContainer')).toHaveLength(1);
+describe('ByIngredient', () => {
+  it('displays properly', () => {
+
+    const byIngredient = shallow(<ByIngredient />);
+    
+    expect(byIngredient.find('.app__cardsContainer')).toHaveLength(1);
+  });
 });
