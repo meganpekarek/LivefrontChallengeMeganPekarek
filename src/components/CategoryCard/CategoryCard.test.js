@@ -4,9 +4,8 @@ import {shallow, configure} from 'enzyme';
 import CategoryCard from './CategoryCard';
 
 configure({adapter: new Adapter()});
-test('Category card is displaying correct title', () => {
-  // Render a checkbox with label in the document
-
+test('Category card is displaying correct title and image', () => {
+  
   const category = {
     strCategory: "test category",
     strCategoryDescription: "test category description",
@@ -16,4 +15,5 @@ test('Category card is displaying correct title', () => {
   const categoryCard = shallow(<CategoryCard category={category} />);
 
   expect(categoryCard.find('.categoryCard__header').text()).toEqual('test category');
+  expect(categoryCard.find("img").prop("src")).toEqual('https://www.themealdb.com/images/media/meals/svprys1511176755.jpg');
 });
