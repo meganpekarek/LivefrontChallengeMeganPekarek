@@ -13,5 +13,6 @@ describe('ByIngredient', () => {
     expect(byIngredient.find('PageHeader')).toHaveLength(1);
     expect(byIngredient.find('.app__cardsWrapper')).toHaveLength(1);
     expect(byIngredient.find('.app__cardsContainer')).toHaveLength(1);
+    expect(byIngredient.find('TextCardLoader')).toHaveLength(16);
   });
 });

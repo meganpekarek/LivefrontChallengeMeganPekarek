@@ -13,5 +13,7 @@ describe('ByRegion', () => {
     expect(byRegion.find('PageHeader')).toHaveLength(1);
     expect(byRegion.find('.app__cardsWrapper')).toHaveLength(1);
     expect(byRegion.find('.app__cardsContainer')).toHaveLength(1);
+    expect(byRegion.find('TextCardLoader')).toHaveLength(16);
+
   });
 });

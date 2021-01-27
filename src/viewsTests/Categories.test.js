@@ -13,5 +13,6 @@ describe('Categories', () => {
     expect(categories.find('PageHeader')).toHaveLength(1);
     expect(categories.find('.app__cardsWrapper')).toHaveLength(1);
     expect(categories.find('.app__cardsContainer')).toHaveLength(1);
+    expect(categories.find('CategoryCardLoader')).toHaveLength(8);
   });
 });

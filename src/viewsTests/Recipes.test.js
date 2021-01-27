@@ -29,5 +29,6 @@ describe('Recipes', () => {
     expect(recipes.find('PageHeader')).toHaveLength(1);
     expect(recipes.find('.app__cardsWrapper')).toHaveLength(1);
     expect(recipes.find('.app__cardsContainer')).toHaveLength(1);
+    expect(recipes.find('RecipeCardLoader')).toHaveLength(8);
   });
 });
