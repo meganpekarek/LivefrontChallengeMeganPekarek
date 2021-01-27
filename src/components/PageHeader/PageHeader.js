@@ -30,7 +30,9 @@ function PageHeader(props) {
   return (
       <React.Fragment>
         <div className="page__headerWrapper">
-          <img className="page__backArrow backArrow" src={BackArrow} onClick={goBack} alt="back-arrow" />
+          {loc.pathname === '/recipes' && (
+            <img className="page__backArrow backArrow" src={BackArrow} onClick={goBack} alt="back-arrow" />)
+          }
           <header className="page__headerText">MY <img  className="page__headerLogo" src={Logo} alt="my meal logo" /> MEAL</header>
           <div className="page__filtersWrapper">
             <span className={`page__filterOption ${activeFilter === 'categories' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/')}>By Category</span>
