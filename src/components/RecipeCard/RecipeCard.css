@@ -10,10 +10,11 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px;
     cursor: pointer;
     position: relative;
+    transition: transform .2s ease-in;
 }
 
 .recipeCard__wrapper:hover {
-    background: var(--color-background-hover);
+    transform: scale(1.1);
 }
 
 .recipeCard__headerWrapper {
