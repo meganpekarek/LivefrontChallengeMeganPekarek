@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/LivefrontChallengeMeganPekarek/static/css/main.aa343d89.chunk.css",
-    "main.js": "/LivefrontChallengeMeganPekarek/static/js/main.e2081ed3.chunk.js",
-    "main.js.map": "/LivefrontChallengeMeganPekarek/static/js/main.e2081ed3.chunk.js.map",
+    "main.js": "/LivefrontChallengeMeganPekarek/static/js/main.6f28177c.chunk.js",
+    "main.js.map": "/LivefrontChallengeMeganPekarek/static/js/main.6f28177c.chunk.js.map",
     "runtime-main.js": "/LivefrontChallengeMeganPekarek/static/js/runtime-main.cfc802af.js",
     "runtime-main.js.map": "/LivefrontChallengeMeganPekarek/static/js/runtime-main.cfc802af.js.map",
     "static/js/2.be70f3cd.chunk.js": "/LivefrontChallengeMeganPekarek/static/js/2.be70f3cd.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.cfc802af.js",
     "static/js/2.be70f3cd.chunk.js",
     "static/css/main.aa343d89.chunk.css",
-    "static/js/main.e2081ed3.chunk.js"
+    "static/js/main.6f28177c.chunk.js"
   ]
 }

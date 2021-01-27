@@ -30,7 +30,7 @@ function Categories(props) {
 
   return (
     <div className="App">
-          <PageHeader subheader="Categories" history={props.history} />
+          <PageHeader history={props.history} />
           <div className="app__cardsWrapper">
             <div className="app__cardsContainer">
               {cards}
