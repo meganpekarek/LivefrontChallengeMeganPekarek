@@ -3,7 +3,6 @@ import RecipeDetails from '../views/RecipeDetails';
 import { act, render, cleanup, waitFor } from '@testing-library/react'
 import axios from 'axios'
 
-
 const recipe = {
     meals: [
         {
@@ -28,6 +27,7 @@ const routeComponentPropsMock = {
     },
     match: {}
 }
+
 beforeEach(() => {
   axios.get = jest.fn(() => Promise.resolve({ data: recipe }))
 })

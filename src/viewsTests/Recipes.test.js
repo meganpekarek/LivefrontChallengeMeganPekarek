@@ -54,6 +54,7 @@ const routeComponentPropsMock = {
     },
     match: {}
 }
+
 beforeEach(() => {
     axios.get = jest.fn(() => Promise.resolve({ data: recipes }))
 })
@@ -87,6 +88,8 @@ describe('Recipes', () => {
         await act(async () => {
             const { getByText, getAllByRole } = render(<Recipes {...routeComponentPropsMock} />);
             await waitFor(() => getByText('testMeal'));
+            getByText('testMeal2');
+            getByText('testMeal3');
             expect(getAllByRole('recipe-card-img')[0]).toHaveAttribute('src', 'https://www.themealdb.com/images/media/meals/svprys1511176755.jpg');
             expect(getAllByRole('recipe-card-img')[1]).toHaveAttribute('src', 'https://www.themealdb.com/images/media/meals2/svprys1511176755.jpg');
             expect(getAllByRole('recipe-card-img')[2]).toHaveAttribute('src', 'https://www.themealdb.com/images/media/meals3/svprys1511176755.jpg');

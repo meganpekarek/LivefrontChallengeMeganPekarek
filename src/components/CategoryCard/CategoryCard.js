@@ -18,7 +18,7 @@ function CategoryCard(props) {
       <React.Fragment>
         <div className="categoryCard__wrapper" onClick={goToRecipes}>
           <div className="categoryCard__imgWrapper">
-            <img className="categoryCard__img" src={category.strCategoryThumb} alt="food-category" />
+            <img role="category-card-img" className="categoryCard__img" src={category.strCategoryThumb} alt="food-category" />
           </div>
           <div>
             <header className="categoryCard__header">{category.strCategory}</header>
