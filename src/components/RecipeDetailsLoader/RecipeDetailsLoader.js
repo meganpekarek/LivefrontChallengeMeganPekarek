@@ -9,7 +9,7 @@ function RecipeDetailsLoader() {
 
     return (
             <React.Fragment>
-                <section className="recipeDetails__headerWrapper">
+                <section role="loaderHeader" className="recipeDetails__headerWrapper">
                     <Skeleton className="backArrow" />
                 </section>
                 <section className="recipeDetails__contentWrapper">

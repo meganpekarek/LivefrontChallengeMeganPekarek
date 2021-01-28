@@ -74,7 +74,7 @@ function RecipeDetails(props) {
                 {recipe.strInstructions}
               </p>
             </div>
-            <img className="recipeDetails__mealImage" src={recipe.strMealThumb} alt="recipe-cover" />
+            <img role="recipe-image" className="recipeDetails__mealImage" src={recipe.strMealThumb} alt="recipe-cover" />
           </section>
         </React.Fragment>
       )}
