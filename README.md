@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Welcome to MyMeal!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application was created for a code challenge. The app utilizes axios to load different recipes from the mealDB (https://www.themealdb.com/api.php). You can filter the available recipes by category, ingredient, or region of the world. 
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses react for all page components. It uses react-router-dom for page routing and jest, enzyme, and react testing library to test page components. React-loading-skeleton was also used to create the loading animations.
+
+
+
 
 ## Available Scripts
 
