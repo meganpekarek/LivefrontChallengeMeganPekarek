@@ -10,7 +10,7 @@ function RecipeDetails(props) {
   const [loading, setLoading] = useState(true);
 
   let mealId = ""
-  if(props.location.state) {
+  if (props.location.state) {
     mealId = props.location.state.recipe.idMeal;
     localStorage.setItem('meal', JSON.stringify(props.location.state.recipe));
   } else {
@@ -28,10 +28,10 @@ function RecipeDetails(props) {
   let ingredients = [];
   let measurements = [];
   for (const [key, value] of Object.entries(recipe)) {
-    if(key.includes('Ingredient') && value !== null && value !== "") {
+    if (key.includes('Ingredient') && value !== null && value !== "") {
       ingredients.push(value)
     }
-    if(key.includes('Measure') && value !== null && value !== "") {
+    if (key.includes('Measure') && value !== null && value !== "") {
       measurements.push(value)
     }
   };

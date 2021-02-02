@@ -21,7 +21,7 @@ function ByRegion(props) {
     const loadingCardCount = 16;
     let cards = ([...Array(loadingCardCount)].map((e, i) => <TextCardLoader key={i} />));
 
-    if(!loading) {
+    if (!loading) {
         cards = (
             regions.map(region => (
                 <TextCard key={region.strArea} cardText={region.strArea} queryParamType="a=" history={props.history}></TextCard>

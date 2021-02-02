@@ -29,7 +29,7 @@ const routeComponentPropsMock = {
 }
 
 beforeEach(() => {
-  axios.get = jest.fn(() => Promise.resolve({ data: recipe }))
+    axios.get = jest.fn(() => Promise.resolve({ data: recipe }))
 })
 afterEach(cleanup)
 

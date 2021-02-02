@@ -10,7 +10,7 @@ function PageHeader(props) {
   let [activeFilter, setActiveFilter] = useState('');
 
   useEffect(() => {
-    if(loc.pathname === '/') {
+    if (loc.pathname === '/') {
       setActiveFilter('categories')
     } else if (loc.pathname === '/byingredient') {
       setActiveFilter('ingredients')
@@ -28,26 +28,26 @@ function PageHeader(props) {
   }
 
   return (
-      <React.Fragment>
-        <div className="page__headerWrapper">
-          {loc.pathname === '/recipes' && (
-            <img className="page__backArrow backArrow" src={BackArrow} onClick={goBack} alt="back-arrow" />
+    <React.Fragment>
+      <div className="page__headerWrapper">
+        {loc.pathname === '/recipes' && (
+          <img className="page__backArrow backArrow" src={BackArrow} onClick={goBack} alt="back-arrow" />
+        )}
+        <header className="page__headerText">MY <img className="page__headerLogo" src={Logo} alt="my meal logo" /> MEAL</header>
+        <div className="page__filtersWrapper">
+          {props.subheader && (
+            <span className="page__filterOption">{props.subheader}</span>
           )}
-          <header className="page__headerText">MY <img  className="page__headerLogo" src={Logo} alt="my meal logo" /> MEAL</header>
-          <div className="page__filtersWrapper">
-            {props.subheader && (
-              <span className="page__filterOption">{props.subheader}</span>
-            )}
-            {!props.subheader && (
-              <React.Fragment>
-                <span className={`page__filterOption ${activeFilter === 'categories' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/')}>By Category</span>
-                <span className={`page__filterOption ${activeFilter === 'ingredients' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/byingredient')}>By Ingredient</span>
-                <span className={`page__filterOption ${activeFilter === 'regions' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/byregion')}>By Region</span>
-              </React.Fragment>
-            )}
-          </div>
+          {!props.subheader && (
+            <React.Fragment>
+              <span className={`page__filterOption ${activeFilter === 'categories' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/')}>By Category</span>
+              <span className={`page__filterOption ${activeFilter === 'ingredients' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/byingredient')}>By Ingredient</span>
+              <span className={`page__filterOption ${activeFilter === 'regions' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/byregion')}>By Region</span>
+            </React.Fragment>
+          )}
         </div>
-      </React.Fragment>
+      </div>
+    </React.Fragment>
   );
 }
 

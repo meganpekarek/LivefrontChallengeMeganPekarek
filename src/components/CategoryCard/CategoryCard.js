@@ -2,7 +2,7 @@ import './CategoryCard.css';
 import React from 'react'
 
 function CategoryCard(props) {
-  const {category} = props;
+  const { category } = props;
 
   const goToRecipes = () => {
     props.history.push({
@@ -15,16 +15,16 @@ function CategoryCard(props) {
   }
 
   return (
-      <React.Fragment>
-        <div className="categoryCard__wrapper" onClick={goToRecipes}>
-          <div className="categoryCard__imgWrapper">
-            <img role="category-card-img" className="categoryCard__img" src={category.strCategoryThumb} alt="food-category" />
-          </div>
-          <div>
-            <header className="categoryCard__header">{category.strCategory}</header>
-          </div>
+    <React.Fragment>
+      <div className="categoryCard__wrapper" onClick={goToRecipes}>
+        <div className="categoryCard__imgWrapper">
+          <img role="category-card-img" className="categoryCard__img" src={category.strCategoryThumb} alt="food-category" />
         </div>
-      </React.Fragment>
+        <div>
+          <header className="categoryCard__header">{category.strCategory}</header>
+        </div>
+      </div>
+    </React.Fragment>
   );
 }
 

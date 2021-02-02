@@ -2,7 +2,7 @@ import './RecipeCard.css';
 import React from 'react'
 
 function RecipeCard(props) {
-  const {recipe} = props;
+  const { recipe } = props;
 
   const goToRecipe = () => {
     props.history.push({

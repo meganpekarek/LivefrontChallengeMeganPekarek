@@ -20,22 +20,22 @@ function Categories(props) {
 
   const loadingCardCount = 8;
   let cards = ([...Array(loadingCardCount)].map((e, i) => <CategoryCardLoader key={i} />));
-  if(!loading) {
+  if (!loading) {
     cards = (
-        categories.map(category => (
-          <CategoryCard key={category.idCategory} category={category} history={props.history}></CategoryCard>
-        ))
+      categories.map(category => (
+        <CategoryCard key={category.idCategory} category={category} history={props.history}></CategoryCard>
+      ))
     )
   }
 
   return (
     <div className="App">
-          <PageHeader history={props.history} />
-          <div className="app__cardsWrapper">
-            <div className="app__cardsContainer">
-              {cards}
-            </div>
-          </div>
+      <PageHeader history={props.history} />
+      <div className="app__cardsWrapper">
+        <div className="app__cardsContainer">
+          {cards}
+        </div>
+      </div>
     </div>
   );
 }

@@ -21,7 +21,7 @@ function ByIngredient(props) {
     const loadingCardCount = 16;
     let cards = ([...Array(loadingCardCount)].map((e, i) => <TextCardLoader key={i} />));
 
-    if(!loading) {
+    if (!loading) {
         let sortedIngredients = ingredients.sort((a, b) => {
             var ingA = a.strIngredient.toUpperCase();
             var ingB = b.strIngredient.toUpperCase();
@@ -33,7 +33,7 @@ function ByIngredient(props) {
             }
             return 0;
         });
-    
+
         cards = (
             sortedIngredients.map(ingredient => (
                 <TextCard key={ingredient.idIngredient} cardText={ingredient.strIngredient} queryParamType="i=" history={props.history}></TextCard>
