@@ -23,8 +23,8 @@ function ByIngredient(props) {
 
     if (!loading) {
         let sortedIngredients = ingredients.sort((a, b) => {
-            var ingA = a.strIngredient.toUpperCase();
-            var ingB = b.strIngredient.toUpperCase();
+            const ingA = a.strIngredient.toUpperCase();
+            const ingB = b.strIngredient.toUpperCase();
             if (ingA < ingB) {
                 return -1;
             }
