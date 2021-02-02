@@ -11,12 +11,12 @@ function PageHeader(props) {
 
   useEffect(() => {
     if (loc.pathname === '/') {
-      setActiveFilter('categories')
+      setActiveFilter('categories');
     } else if (loc.pathname === '/byingredient') {
-      setActiveFilter('ingredients')
+      setActiveFilter('ingredients');
     } else if (loc.pathname === '/byregion') {
-      setActiveFilter('regions')
-    }
+      setActiveFilter('regions');
+    };
   }, [loc.pathname]);
 
   const goToFilter = (filter) => {
@@ -27,6 +27,16 @@ function PageHeader(props) {
     props.history.goBack();
   };
 
+  const subheader = props.subheader ? (
+    <span className="page__filterOption">{props.subheader}</span>
+  ) : (
+    <React.Fragment>
+      <span className={`page__filterOption ${activeFilter === 'categories' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/')}>By Category</span>
+      <span className={`page__filterOption ${activeFilter === 'ingredients' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/byingredient')}>By Ingredient</span>
+      <span className={`page__filterOption ${activeFilter === 'regions' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/byregion')}>By Region</span>
+    </React.Fragment>
+  );
+
   return (
     <React.Fragment>
       <div className="page__headerWrapper">
@@ -35,20 +45,11 @@ function PageHeader(props) {
         )}
         <header className="page__headerText">MY <img className="page__headerLogo" src={Logo} alt="my meal logo" /> MEAL</header>
         <div className="page__filtersWrapper">
-          {props.subheader && (
-            <span className="page__filterOption">{props.subheader}</span>
-          )}
-          {!props.subheader && (
-            <React.Fragment>
-              <span className={`page__filterOption ${activeFilter === 'categories' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/')}>By Category</span>
-              <span className={`page__filterOption ${activeFilter === 'ingredients' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/byingredient')}>By Ingredient</span>
-              <span className={`page__filterOption ${activeFilter === 'regions' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/byregion')}>By Region</span>
-            </React.Fragment>
-          )}
+          {subheader}
         </div>
       </div>
     </React.Fragment>
   );
-}
+};
 
 export default PageHeader;
