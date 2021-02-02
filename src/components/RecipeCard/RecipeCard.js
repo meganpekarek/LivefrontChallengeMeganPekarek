@@ -1,5 +1,5 @@
 import './RecipeCard.css';
-import React from 'react'
+import React from 'react';
 
 function RecipeCard(props) {
   const { recipe } = props;
@@ -10,8 +10,8 @@ function RecipeCard(props) {
       state: {
         recipe: recipe
       }
-    })
-  }
+    });
+  };
 
   return (
     <div className="App">
@@ -25,6 +25,6 @@ function RecipeCard(props) {
       </React.Fragment>
     </div>
   );
-}
+};
 
 export default RecipeCard;

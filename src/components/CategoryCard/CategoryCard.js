@@ -1,5 +1,5 @@
 import './CategoryCard.css';
-import React from 'react'
+import React from 'react';
 
 function CategoryCard(props) {
   const { category } = props;
@@ -11,8 +11,8 @@ function CategoryCard(props) {
         selection: category.strCategory,
         queryParamType: "c="
       }
-    })
-  }
+    });
+  };
 
   return (
     <React.Fragment>
@@ -26,6 +26,6 @@ function CategoryCard(props) {
       </div>
     </React.Fragment>
   );
-}
+};
 
 export default CategoryCard;

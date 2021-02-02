@@ -1,8 +1,8 @@
 import './PageHeader.css';
-import React, { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
-import Logo from '../../images/myMealLogo.svg'
-import BackArrow from '../../images/backArrow.svg'
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import Logo from '../../images/myMealLogo.svg';
+import BackArrow from '../../images/backArrow.svg';
 
 function PageHeader(props) {
 
@@ -21,11 +21,11 @@ function PageHeader(props) {
 
   const goToFilter = (filter) => {
     props.history.push(filter);
-  }
+  };
 
   const goBack = () => {
     props.history.goBack();
-  }
+  };
 
   return (
     <React.Fragment>

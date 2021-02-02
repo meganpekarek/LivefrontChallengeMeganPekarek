@@ -1,7 +1,7 @@
 import Skeleton from "react-loading-skeleton";
-import React from 'react'
+import React from 'react';
 import './RecipeDetailsLoader.css';
-import '../../App.css'
+import '../../App.css';
 
 function RecipeDetailsLoader() {
 
@@ -27,6 +27,6 @@ function RecipeDetailsLoader() {
             </section>
         </React.Fragment>
     );
-}
+};
 
 export default RecipeDetailsLoader;

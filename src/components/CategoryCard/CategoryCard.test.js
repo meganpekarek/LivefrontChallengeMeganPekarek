@@ -12,7 +12,7 @@ describe('CategoryCard', () => {
       strCategory: "test category",
       strCategoryDescription: "test category description",
       strCategoryThumb: "https://www.themealdb.com/images/media/meals/svprys1511176755.jpg"
-    }
+    };
 
     const categoryCard = shallow(<CategoryCard category={category} />);
 

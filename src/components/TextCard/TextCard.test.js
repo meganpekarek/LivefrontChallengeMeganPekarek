@@ -8,7 +8,7 @@ configure({ adapter: new Adapter() });
 describe('TextCard', () => {
   it('displays correct title', () => {
 
-    const cardText = "test header"
+    const cardText = "test header";
 
     const textCard = shallow(<TextCard cardText={cardText} />);
 

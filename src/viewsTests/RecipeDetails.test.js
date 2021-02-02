@@ -1,7 +1,7 @@
 import React from 'react';
 import RecipeDetails from '../views/RecipeDetails';
-import { act, render, cleanup, waitFor } from '@testing-library/react'
-import axios from 'axios'
+import { act, render, cleanup, waitFor } from '@testing-library/react';
+import axios from 'axios';
 
 const recipe = {
     meals: [
@@ -14,7 +14,7 @@ const recipe = {
             strMealThumb: 'https://www.themealdb.com/images/media/meals/svprys1511176755.jpg'
         }
     ]
-}
+};
 
 const routeComponentPropsMock = {
     history: {},
@@ -26,12 +26,12 @@ const routeComponentPropsMock = {
         }
     },
     match: {}
-}
+};
 
 beforeEach(() => {
     axios.get = jest.fn(() => Promise.resolve({ data: recipe }))
-})
-afterEach(cleanup)
+});
+afterEach(cleanup);
 
 describe('RecipeDetails', () => {
     it('displays the loading screen before content loads', async () => {

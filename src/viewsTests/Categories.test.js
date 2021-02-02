@@ -2,8 +2,8 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
 import Categories from '../views/Categories';
-import { act, render, cleanup, waitFor } from '@testing-library/react'
-import axios from 'axios'
+import { act, render, cleanup, waitFor } from '@testing-library/react';
+import axios from 'axios';
 
 configure({ adapter: new Adapter() });
 jest.mock("react-router-dom", () => ({
@@ -31,12 +31,12 @@ const categories = {
       strCategoryThumb: 'https://www.themealdb.com/images/media/meals3/svprys1511176755.jpg'
     }
   ]
-}
+};
 
 beforeEach(() => {
   axios.get = jest.fn(() => Promise.resolve({ data: categories }))
-})
-afterEach(cleanup)
+});
+afterEach(cleanup);
 
 describe('Categories', () => {
   it('displays proper elements before cards load', () => {

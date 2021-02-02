@@ -1,9 +1,9 @@
 import '../App.css';
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import TextCard from '../components/TextCard'
-import PageHeader from '../components/PageHeader'
-import TextCardLoader from '../components/TextCardLoader'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import TextCard from '../components/TextCard';
+import PageHeader from '../components/PageHeader';
+import TextCardLoader from '../components/TextCardLoader';
 
 function ByIngredient(props) {
 
@@ -39,7 +39,7 @@ function ByIngredient(props) {
                 <TextCard key={ingredient.idIngredient} cardText={ingredient.strIngredient} queryParamType="i=" history={props.history}></TextCard>
             ))
         );
-    }
+    };
 
     return (
         <div className="App">
@@ -51,6 +51,6 @@ function ByIngredient(props) {
             </div>
         </div>
     );
-}
+};
 
 export default ByIngredient;

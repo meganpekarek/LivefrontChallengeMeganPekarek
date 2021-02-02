@@ -2,8 +2,8 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
 import Recipes from '../views/Recipes';
-import { act, render, cleanup, waitFor } from '@testing-library/react'
-import axios from 'axios'
+import { act, render, cleanup, waitFor } from '@testing-library/react';
+import axios from 'axios';
 
 configure({ adapter: new Adapter() });
 
@@ -41,7 +41,7 @@ const recipes = {
             strMealThumb: 'https://www.themealdb.com/images/media/meals3/svprys1511176755.jpg'
         }
     ]
-}
+};
 
 const routeComponentPropsMock = {
     history: {},
@@ -53,12 +53,12 @@ const routeComponentPropsMock = {
         }
     },
     match: {}
-}
+};
 
 beforeEach(() => {
     axios.get = jest.fn(() => Promise.resolve({ data: recipes }))
-})
-afterEach(cleanup)
+});
+afterEach(cleanup);
 
 describe('Recipes', () => {
     it('displays proper elements when loading state is true', () => {

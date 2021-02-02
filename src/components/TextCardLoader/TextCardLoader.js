@@ -1,5 +1,5 @@
 import '../TextCard/TextCard.css';
-import React from 'react'
+import React from 'react';
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 function TextCardLoader() {
@@ -15,6 +15,6 @@ function TextCardLoader() {
       </SkeletonTheme>
     </React.Fragment>
   );
-}
+};
 
 export default TextCardLoader;

@@ -1,5 +1,5 @@
 import './TextCard.css';
-import React from 'react'
+import React from 'react';
 
 function TextCard(props) {
   const { cardText, queryParamType } = props;
@@ -11,8 +11,8 @@ function TextCard(props) {
         selection: cardText,
         queryParamType: queryParamType
       }
-    })
-  }
+    });
+  };
 
   return (
     <React.Fragment>
@@ -23,6 +23,6 @@ function TextCard(props) {
       </div>
     </React.Fragment>
   );
-}
+};
 
 export default TextCard;

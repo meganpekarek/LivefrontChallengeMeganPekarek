@@ -11,7 +11,7 @@ describe('RecipeCard', () => {
     const recipe = {
       strMeal: "test meal",
       strMealThumb: "https://www.themealdb.com/images/media/meals/svprys1511176755.jpg"
-    }
+    };
 
     const recipeCard = shallow(<RecipeCard recipe={recipe} />);
 

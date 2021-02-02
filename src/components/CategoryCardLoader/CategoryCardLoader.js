@@ -1,5 +1,5 @@
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-import React from 'react'
+import React from 'react';
 import './CategoryCardLoader.css';
 
 function CategoryCardLoader() {
@@ -16,6 +16,6 @@ function CategoryCardLoader() {
             </div>
         </SkeletonTheme>
     );
-}
+};
 
 export default CategoryCardLoader;

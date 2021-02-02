@@ -2,8 +2,8 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
 import ByIngredient from '../views/ByIngredient';
-import { act, render, cleanup, waitFor } from '@testing-library/react'
-import axios from 'axios'
+import { act, render, cleanup, waitFor } from '@testing-library/react';
+import axios from 'axios';
 
 configure({ adapter: new Adapter() });
 jest.mock("react-router-dom", () => ({
@@ -28,12 +28,12 @@ const ingredients = {
             idIngredient: '57724'
         },
     ]
-}
+};
 
 beforeEach(() => {
     axios.get = jest.fn(() => Promise.resolve({ data: ingredients }))
-})
-afterEach(cleanup)
+});
+afterEach(cleanup);
 
 configure({ adapter: new Adapter() });
 

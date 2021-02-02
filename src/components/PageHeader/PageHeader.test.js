@@ -2,7 +2,6 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
 import PageHeader from './PageHeader';
-import { useLocation } from 'react-router-dom';
 
 configure({ adapter: new Adapter() });
 

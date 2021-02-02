@@ -1,9 +1,9 @@
 import '../App.css';
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import CategoryCard from '../components/CategoryCard'
-import PageHeader from '../components/PageHeader'
-import CategoryCardLoader from '../components/CategoryCardLoader'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import CategoryCard from '../components/CategoryCard';
+import PageHeader from '../components/PageHeader';
+import CategoryCardLoader from '../components/CategoryCardLoader';
 
 function Categories(props) {
 
@@ -25,8 +25,8 @@ function Categories(props) {
       categories.map(category => (
         <CategoryCard key={category.idCategory} category={category} history={props.history}></CategoryCard>
       ))
-    )
-  }
+    );
+  };
 
   return (
     <div className="App">
@@ -38,6 +38,6 @@ function Categories(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Categories;

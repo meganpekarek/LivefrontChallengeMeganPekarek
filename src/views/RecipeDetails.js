@@ -1,7 +1,7 @@
 import '../App.css';
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import BackArrow from '../images/backArrow.svg'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import BackArrow from '../images/backArrow.svg';
 import RecipeDetailsLoader from '../components/RecipeDetailsLoader';
 
 function RecipeDetails(props) {
@@ -9,7 +9,7 @@ function RecipeDetails(props) {
   const [recipe, setRecipe] = useState({});
   const [loading, setLoading] = useState(true);
 
-  let mealId = ""
+  let mealId = "";
   if (props.location.state) {
     mealId = props.location.state.recipe.idMeal;
     localStorage.setItem('meal', JSON.stringify(props.location.state.recipe));
@@ -29,21 +29,21 @@ function RecipeDetails(props) {
   let measurements = [];
   for (const [key, value] of Object.entries(recipe)) {
     if (key.includes('Ingredient') && value !== null && value !== "") {
-      ingredients.push(value)
-    }
+      ingredients.push(value);
+    };
     if (key.includes('Measure') && value !== null && value !== "") {
-      measurements.push(value)
-    }
+      measurements.push(value);
+    };
   };
 
-  let ingredientsList = []
+  let ingredientsList = [];
   ingredients.forEach((ingredient, index) => {
     ingredientsList.push(measurements[index] + ' ' + ingredient);
   });
 
   const goBack = () => {
     props.history.goBack();
-  }
+  };
 
 
   return (
@@ -80,6 +80,6 @@ function RecipeDetails(props) {
       )}
     </div>
   );
-}
+};
 
 export default RecipeDetails;

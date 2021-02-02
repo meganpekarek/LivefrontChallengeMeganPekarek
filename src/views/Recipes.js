@@ -1,17 +1,17 @@
 import '../App.css';
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import RecipeCard from '../components/RecipeCard'
-import PageHeader from '../components/PageHeader'
-import RecipeCardLoader from '../components/RecipeCardLoader'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import RecipeCard from '../components/RecipeCard';
+import PageHeader from '../components/PageHeader';
+import RecipeCardLoader from '../components/RecipeCardLoader';
 
 function Recipes(props) {
 
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  let selectionName = ""
-  let queryType = ""
+  let selectionName = "";
+  let queryType = "";
   if (props.location.state) {
     selectionName = props.location.state.selection;
     queryType = props.location.state.queryParamType;
@@ -20,7 +20,7 @@ function Recipes(props) {
   } else {
     selectionName = JSON.parse(localStorage.getItem('selection'));
     queryType = JSON.parse(localStorage.getItem('queryType'));
-  }
+  };
 
 
   useEffect(() => {
@@ -31,7 +31,7 @@ function Recipes(props) {
       })
   }, [queryType, selectionName]);
 
-  let subheader = selectionName + ' Recipes'
+  let subheader = selectionName + ' Recipes';
 
   const loadingCardCount = 8;
   let cards = ([...Array(loadingCardCount)].map((e, i) => <RecipeCardLoader key={i} />));
@@ -41,11 +41,11 @@ function Recipes(props) {
         recipes.map(recipe => (
           <RecipeCard key={recipe.idMeal} recipe={recipe} history={props.history}></RecipeCard>
         ))
-      )
+      );
     } else {
       cards = <span className="app__infoSpan">No recipes found for your selection</span>
-    }
-  }
+    };
+  };
 
   return (
     <div className="App">
@@ -57,6 +57,6 @@ function Recipes(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Recipes;

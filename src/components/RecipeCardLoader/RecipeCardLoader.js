@@ -1,5 +1,5 @@
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-import React from 'react'
+import React from 'react';
 import './RecipeCardLoader.css';
 
 function RecipeCardLoader() {
@@ -11,6 +11,6 @@ function RecipeCardLoader() {
             </div>
         </SkeletonTheme>
     );
-}
+};
 
 export default RecipeCardLoader;

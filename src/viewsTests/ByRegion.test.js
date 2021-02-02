@@ -2,8 +2,8 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
 import ByRegion from '../views/ByRegion';
-import { act, render, cleanup, waitFor } from '@testing-library/react'
-import axios from 'axios'
+import { act, render, cleanup, waitFor } from '@testing-library/react';
+import axios from 'axios';
 
 configure({ adapter: new Adapter() });
 jest.mock("react-router-dom", () => ({
@@ -25,12 +25,12 @@ const regions = {
             strArea: 'Irish'
         },
     ]
-}
+};
 
 beforeEach(() => {
     axios.get = jest.fn(() => Promise.resolve({ data: regions }))
-})
-afterEach(cleanup)
+});
+afterEach(cleanup);
 
 describe('ByRegion', () => {
     it('displays proper elements before content loads', () => {

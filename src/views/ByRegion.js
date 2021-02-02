@@ -1,9 +1,9 @@
 import '../App.css';
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import TextCard from '../components/TextCard'
-import PageHeader from '../components/PageHeader'
-import TextCardLoader from '../components/TextCardLoader'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import TextCard from '../components/TextCard';
+import PageHeader from '../components/PageHeader';
+import TextCardLoader from '../components/TextCardLoader';
 
 function ByRegion(props) {
 
@@ -27,7 +27,7 @@ function ByRegion(props) {
                 <TextCard key={region.strArea} cardText={region.strArea} queryParamType="a=" history={props.history}></TextCard>
             ))
         )
-    }
+    };
 
     return (
         <div className="App">
@@ -39,6 +39,6 @@ function ByRegion(props) {
             </div>
         </div>
     );
-}
+};
 
 export default ByRegion;
