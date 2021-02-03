@@ -79,6 +79,19 @@ html {
   font-size: 2rem;
 }
 
+.pageNotFound__Wrapper {
+  width: 100%;
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageNotFound__Text {
+  font-family: var(--font-family-primary);
+  font-size: 4rem;
+}
+
 .recipeDetails__headerWrapper {
   background: var(--color-primary);
   padding: 4rem var(--side-header-padding);

@@ -8,6 +8,7 @@ import Recipes from './views/Recipes'
 import RecipeDetails from './views/RecipeDetails'
 import { Route, Switch, HashRouter as Router } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
+import PageNotFound from './views/PageNotFound';
 
 const routing = (
   <Router>
@@ -18,6 +19,7 @@ const routing = (
         <Route path="/by-region" component={ByRegion} />
         <Route path="/recipes/:recipeType" component={Recipes} />
         <Route path="/recipe-details/:mealId" component={RecipeDetails} />
+        <Route component={PageNotFound} />
       </Switch>
     </div>
   </Router>
