@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/LivefrontChallengeMeganPekarek/static/css/main.aa343d89.chunk.css",
-    "main.js": "/LivefrontChallengeMeganPekarek/static/js/main.f8e806e7.chunk.js",
-    "main.js.map": "/LivefrontChallengeMeganPekarek/static/js/main.f8e806e7.chunk.js.map",
-    "runtime-main.js": "/LivefrontChallengeMeganPekarek/static/js/runtime-main.cfc802af.js",
-    "runtime-main.js.map": "/LivefrontChallengeMeganPekarek/static/js/runtime-main.cfc802af.js.map",
-    "static/js/2.be70f3cd.chunk.js": "/LivefrontChallengeMeganPekarek/static/js/2.be70f3cd.chunk.js",
-    "static/js/2.be70f3cd.chunk.js.map": "/LivefrontChallengeMeganPekarek/static/js/2.be70f3cd.chunk.js.map",
-    "static/js/3.1673579e.chunk.js": "/LivefrontChallengeMeganPekarek/static/js/3.1673579e.chunk.js",
-    "static/js/3.1673579e.chunk.js.map": "/LivefrontChallengeMeganPekarek/static/js/3.1673579e.chunk.js.map",
+    "main.css": "/LivefrontChallengeMeganPekarek/static/css/main.52a349d9.chunk.css",
+    "main.js": "/LivefrontChallengeMeganPekarek/static/js/main.3b8e0afa.chunk.js",
+    "main.js.map": "/LivefrontChallengeMeganPekarek/static/js/main.3b8e0afa.chunk.js.map",
+    "runtime-main.js": "/LivefrontChallengeMeganPekarek/static/js/runtime-main.ac309f76.js",
+    "runtime-main.js.map": "/LivefrontChallengeMeganPekarek/static/js/runtime-main.ac309f76.js.map",
+    "static/js/2.96d7abf4.chunk.js": "/LivefrontChallengeMeganPekarek/static/js/2.96d7abf4.chunk.js",
+    "static/js/2.96d7abf4.chunk.js.map": "/LivefrontChallengeMeganPekarek/static/js/2.96d7abf4.chunk.js.map",
+    "static/js/3.11784ac0.chunk.js": "/LivefrontChallengeMeganPekarek/static/js/3.11784ac0.chunk.js",
+    "static/js/3.11784ac0.chunk.js.map": "/LivefrontChallengeMeganPekarek/static/js/3.11784ac0.chunk.js.map",
     "index.html": "/LivefrontChallengeMeganPekarek/index.html",
-    "static/css/main.aa343d89.chunk.css.map": "/LivefrontChallengeMeganPekarek/static/css/main.aa343d89.chunk.css.map",
-    "static/js/2.be70f3cd.chunk.js.LICENSE.txt": "/LivefrontChallengeMeganPekarek/static/js/2.be70f3cd.chunk.js.LICENSE.txt",
+    "static/css/main.52a349d9.chunk.css.map": "/LivefrontChallengeMeganPekarek/static/css/main.52a349d9.chunk.css.map",
+    "static/js/2.96d7abf4.chunk.js.LICENSE.txt": "/LivefrontChallengeMeganPekarek/static/js/2.96d7abf4.chunk.js.LICENSE.txt",
     "static/media/backArrow.dfac1a3f.svg": "/LivefrontChallengeMeganPekarek/static/media/backArrow.dfac1a3f.svg",
     "static/media/myMealLogo.52903069.svg": "/LivefrontChallengeMeganPekarek/static/media/myMealLogo.52903069.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.cfc802af.js",
-    "static/js/2.be70f3cd.chunk.js",
-    "static/css/main.aa343d89.chunk.css",
-    "static/js/main.f8e806e7.chunk.js"
+    "static/js/runtime-main.ac309f76.js",
+    "static/js/2.96d7abf4.chunk.js",
+    "static/css/main.52a349d9.chunk.css",
+    "static/js/main.3b8e0afa.chunk.js"
   ]
 }
