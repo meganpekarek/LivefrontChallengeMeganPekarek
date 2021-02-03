@@ -31,9 +31,9 @@ function PageHeader(props) {
     <span className="page__filterOption">{props.subheader}</span>
   ) : (
     <React.Fragment>
-      <span className={`page__filterOption ${activeFilter === 'categories' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/')}>By Category</span>
-      <span className={`page__filterOption ${activeFilter === 'ingredients' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/by-ingredient')}>By Ingredient</span>
-      <span className={`page__filterOption ${activeFilter === 'regions' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/by-region')}>By Region</span>
+      <button className={`page__filterOption ${activeFilter === 'categories' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/')}>By Category</button>
+      <button className={`page__filterOption ${activeFilter === 'ingredients' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/by-ingredient')}>By Ingredient</button>
+      <button className={`page__filterOption ${activeFilter === 'regions' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/by-region')}>By Region</button>
     </React.Fragment>
   );
 
