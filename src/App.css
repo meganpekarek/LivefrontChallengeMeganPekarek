@@ -31,9 +31,10 @@ html {
   font-size: 1.6rem;
 }
 
-.backArrow {
+.app__backArrow {
   cursor: pointer;
   width: var(--back-arrow-width);
+  padding: 1.2rem;
 }
 
 .app__cardsWrapper {

@@ -54,7 +54,7 @@ function RecipeDetails(props) {
       {!loading && (
         <React.Fragment>
           <section className="recipeDetails__headerWrapper">
-            <img className="backArrow" src={BackArrow} onClick={goBack} alt="go back" />
+            <img className="app__backArrow" src={BackArrow} onClick={goBack} alt="go back" />
             <header className="recipeDetails__headerText">{recipe.strMeal}</header>
           </section>
           <section className="recipeDetails__contentWrapper">
