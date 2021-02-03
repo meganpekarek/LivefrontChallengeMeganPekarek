@@ -14,6 +14,9 @@ html {
   --subheader-font-size: 2.5rem;
   --side-page-padding: 7rem;
   --back-arrow-width: 2rem;
+  --paragraph-font-size: 2rem;
+  --paragraph-line-height: 4rem;
+  --recipe-content-margin: 0;
   font-size: 62.5%;
 }
 
@@ -23,7 +26,10 @@ html {
     --header-font-size: 5rem;
     --header-y-padding: 3rem;
     --subheader-font-size: 1.6rem;
-    --back-arrow-width: 1rem;
+    --back-arrow-width: 1.5rem;
+    --paragraph-font-size: 1.6rem;
+    --paragraph-line-height: 3rem;
+    --recipe-content-margin: 2rem 0;
   }
 }
 
@@ -83,8 +89,8 @@ html {
 .recipeDetails__recipeContent {
   display: flex;
   flex-direction: column;
-  margin-right: 4rem;
   width: 40rem;
+  margin: var(--recipe-content-margin);
 }
 
 .recipeDetails__recipeContentHeader {
@@ -101,16 +107,16 @@ html {
 
 .recipeDetails__ingredientsList {
   font-family: var(--font-family-secondary);
-  font-size: 2rem;
+  font-size: var(--paragraph-font-size);
   font-weight: 700;
-  line-height: 4rem;
+  line-height: var(--paragraph-line-height);
 }
 
 .recipeDetails__instructionsText {
   font-family: var(--font-family-secondary);
-  font-size: 2rem;
+  font-size: var(--paragraph-font-size);
   font-weight: 700;
-  line-height: 4rem;
+  line-height: var(--paragraph-line-height);
 }
 
 .recipeDetails__mealImage {
