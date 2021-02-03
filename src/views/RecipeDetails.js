@@ -8,6 +8,7 @@ function RecipeDetails(props) {
 
   const [recipe, setRecipe] = useState({});
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(true);
 
   let mealId = "";
   if (props.location.state) {
@@ -22,6 +23,9 @@ function RecipeDetails(props) {
       .then(res => {
         setRecipe(res.data.meals[0]);
         setLoading(false);
+      }).catch(() => {
+        setLoading(false);
+        setLoadError(true);
       })
   }, [mealId]);
 
@@ -45,7 +49,6 @@ function RecipeDetails(props) {
     props.history.goBack();
   };
 
-
   return (
     <div className="App">
       {loading && (
@@ -57,27 +60,29 @@ function RecipeDetails(props) {
             <button className="recipeDetails__backArrow app__backArrow" onClick={goBack}>
               <img className="app__backArrowImg" src={BackArrow} alt="go back" />
             </button>
-            <header className="recipeDetails__headerText">{recipe.strMeal}</header>
+            <header className="recipeDetails__headerText">{!loadError ? recipe.strMeal : "Couldn't load meal"}</header>
           </section>
-          <section className="recipeDetails__contentWrapper">
-            <div className="recipeDetails__recipeContent">
-              <span className="recipeDetails__recipeContentHeader">Ingredients</span>
-              <hr className="recipeDetails__contentSeparator" />
-              <ul className="recipeDetails__ingredientsList">
-                {ingredientsList.map(item => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="recipeDetails__recipeContent">
-              <span className="recipeDetails__recipeContentHeader">Instructions</span>
-              <hr className="recipeDetails__contentSeparator" />
-              <p className="recipeDetails__instructionsText">
-                {recipe.strInstructions}
-              </p>
-            </div>
-            <img role="recipe-image" className="recipeDetails__mealImage" src={recipe.strMealThumb} alt="recipe cover" />
-          </section>
+          {!loadError && (
+            <section className="recipeDetails__contentWrapper">
+              <div className="recipeDetails__recipeContent">
+                <span className="recipeDetails__recipeContentHeader">Ingredients</span>
+                <hr className="recipeDetails__contentSeparator" />
+                <ul className="recipeDetails__ingredientsList">
+                  {ingredientsList.map(item => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="recipeDetails__recipeContent">
+                <span className="recipeDetails__recipeContentHeader">Instructions</span>
+                <hr className="recipeDetails__contentSeparator" />
+                <p className="recipeDetails__instructionsText">
+                  {recipe.strInstructions}
+                </p>
+              </div>
+              <img role="recipe-image" className="recipeDetails__mealImage" src={recipe.strMealThumb} alt="recipe cover" />
+            </section>
+          )}
         </React.Fragment>
       )}
     </div>

@@ -9,6 +9,7 @@ function Recipes(props) {
 
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
 
   let selectionName = "";
   let queryType = "";
@@ -28,6 +29,9 @@ function Recipes(props) {
       .then(res => {
         setRecipes(res.data.meals);
         setLoading(false);
+      }).catch(() => {
+        setLoading(false);
+        setLoadError(true);
       })
   }, [queryType, selectionName]);
 
@@ -52,7 +56,9 @@ function Recipes(props) {
       <PageHeader subheader={subheader} history={props.history} />
       <div className="app__cardsWrapper">
         <div className="app__cardsContainer">
-          {cards}
+          {!loadError ? (
+            cards
+          ) : <span>Could not load recipes</span>}
         </div>
       </div>
     </div>

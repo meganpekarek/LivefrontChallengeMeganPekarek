@@ -9,12 +9,16 @@ function ByIngredient(props) {
 
     const [ingredients, setIngredients] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [loadError, setLoadError] = useState(false);
 
     useEffect(() => {
         axios.get(`https://www.themealdb.com/api/json/v1/1/list.php?i=list`)
             .then(res => {
                 setIngredients(res.data.meals);
                 setLoading(false);
+            }).catch(() => {
+                setLoading(false);
+                setLoadError(true);
             })
     }, []);
 
@@ -46,7 +50,9 @@ function ByIngredient(props) {
             <PageHeader history={props.history} />
             <div className="app__cardsWrapper">
                 <div className="app__cardsContainer">
-                    {cards}
+                    {!loadError ? (
+                        cards
+                    ) : <span>Could not load ingredients</span>}
                 </div>
             </div>
         </div>
