@@ -1,14 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Categories from './views/Categories'
-import ByIngredient from './views/ByIngredient'
-import ByRegion from './views/ByRegion'
-import Recipes from './views/Recipes'
-import RecipeDetails from './views/RecipeDetails'
-import { Route, Switch, HashRouter as Router } from 'react-router-dom'
-import reportWebVitals from './reportWebVitals';
-import PageNotFound from './views/PageNotFound';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Categories from "./views/Categories";
+import ByIngredient from "./views/ByIngredient";
+import ByRegion from "./views/ByRegion";
+import Recipes from "./views/Recipes";
+import RecipeDetails from "./views/RecipeDetails";
+import { Route, Switch, HashRouter as Router } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
+import PageNotFound from "./views/PageNotFound";
 
 const routing = (
   <Router>
@@ -23,9 +23,9 @@ const routing = (
       </Switch>
     </div>
   </Router>
-)
+);
 
-ReactDOM.render(routing, document.getElementById('root'))
+ReactDOM.render(routing, document.getElementById("root"));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

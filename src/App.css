@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&display=swap");
 html {
   --color-text: black;
   --color-background: white;
-  --color-background-hover: #F1F1F1;
-  --color-primary: #E7ECE6;
-  --color-secondary: #F3F6F2;
-  --font-family-primary: 'Bebas Neue', cursive;
-  --font-family-secondary: 'Rokkitt', serif;
+  --color-background-hover: #f1f1f1;
+  --color-primary: #e7ece6;
+  --color-secondary: #f3f6f2;
+  --font-family-primary: "Bebas Neue", cursive;
+  --font-family-secondary: "Rokkitt", serif;
   --header-font-size: 7rem;
   --header-y-padding: 5rem;
   --subheader-font-size: 2.5rem;
@@ -149,6 +149,6 @@ html {
 .recipeDetails__mealImage {
   width: 30rem;
   height: 30rem;
-  border-radius: .6rem;
+  border-radius: 0.6rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px;
 }

@@ -1,22 +1,22 @@
 .recipeDetailsLoader__ingredientsList {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 .recipeDetailsLoader__ingredients {
-    margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .recipeDetailsLoader__instructions {
-    height: 6rem;
-    margin: 1.5rem 0;
+  height: 6rem;
+  margin: 1.5rem 0;
 }
 
 .recipeDetailsLoader__mealImageWrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .recipeDetailsLoader__mealImage {
-    height: 30rem;
-    width: 30rem;
+  height: 30rem;
+  width: 30rem;
 }

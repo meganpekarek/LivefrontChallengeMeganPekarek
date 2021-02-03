@@ -1,3 +1,3 @@
-import RecipeCardLoader from './RecipeCardLoader.js';
+import RecipeCardLoader from "./RecipeCardLoader.js";
 
 export default RecipeCardLoader;

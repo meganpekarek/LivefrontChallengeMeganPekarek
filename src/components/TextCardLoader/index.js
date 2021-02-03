@@ -1,3 +1,3 @@
-import TextCardLoader from './TextCardLoader.js';
+import TextCardLoader from "./TextCardLoader.js";
 
 export default TextCardLoader;
