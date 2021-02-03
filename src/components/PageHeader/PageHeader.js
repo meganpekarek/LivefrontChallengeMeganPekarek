@@ -40,7 +40,7 @@ function PageHeader(props) {
   return (
     <React.Fragment>
       <div className="page__headerWrapper">
-        {loc.pathname === '/recipes' && (
+        {loc.pathname.includes('/recipes') && (
           <button className="page__backArrow app__backArrow" onClick={goBack}>
             <img className="app__backArrowImg" src={BackArrow} alt="go back" />
           </button>

@@ -6,7 +6,7 @@ function CategoryCard(props) {
 
   const goToRecipes = () => {
     props.history.push({
-      pathname: '/recipes',
+      pathname: '/recipes/' + category.strCategory,
       state: {
         selection: category.strCategory,
         queryParamType: "c="

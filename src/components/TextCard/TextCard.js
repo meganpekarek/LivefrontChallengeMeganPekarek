@@ -6,7 +6,7 @@ function TextCard(props) {
 
   const goToRecipes = () => {
     props.history.push({
-      pathname: '/recipes',
+      pathname: '/recipes/' + cardText,
       state: {
         selection: cardText,
         queryParamType: queryParamType

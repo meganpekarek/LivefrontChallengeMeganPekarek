@@ -6,7 +6,7 @@ function RecipeCard(props) {
 
   const goToRecipe = () => {
     props.history.push({
-      pathname: '/recipe-details',
+      pathname: '/recipe-details/' + recipe.idMeal,
       state: {
         recipe: recipe
       }

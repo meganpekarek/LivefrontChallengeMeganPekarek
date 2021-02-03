@@ -16,8 +16,8 @@ const routing = (
         <Route exact path="/" component={Categories} />
         <Route path="/by-ingredient" component={ByIngredient} />
         <Route path="/by-region" component={ByRegion} />
-        <Route path="/recipes" component={Recipes} />
-        <Route path="/recipe-details" component={RecipeDetails} />
+        <Route path="/recipes/:recipeType" component={Recipes} />
+        <Route path="/recipe-details/:mealId" component={RecipeDetails} />
       </Switch>
     </div>
   </Router>
