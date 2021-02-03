@@ -14,10 +14,10 @@ const routing = (
     <div className="app__wrapper">
       <Switch>
         <Route exact path="/" component={Categories} />
-        <Route path="/byingredient" component={ByIngredient} />
-        <Route path="/byregion" component={ByRegion} />
+        <Route path="/by-ingredient" component={ByIngredient} />
+        <Route path="/by-region" component={ByRegion} />
         <Route path="/recipes" component={Recipes} />
-        <Route path="/recipedetails" component={RecipeDetails} />
+        <Route path="/recipe-details" component={RecipeDetails} />
       </Switch>
     </div>
   </Router>

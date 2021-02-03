@@ -12,9 +12,9 @@ function PageHeader(props) {
   useEffect(() => {
     if (loc.pathname === '/') {
       setActiveFilter('categories');
-    } else if (loc.pathname === '/byingredient') {
+    } else if (loc.pathname === '/by-ingredient') {
       setActiveFilter('ingredients');
-    } else if (loc.pathname === '/byregion') {
+    } else if (loc.pathname === '/by-region') {
       setActiveFilter('regions');
     };
   }, [loc.pathname]);
@@ -32,8 +32,8 @@ function PageHeader(props) {
   ) : (
     <React.Fragment>
       <span className={`page__filterOption ${activeFilter === 'categories' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/')}>By Category</span>
-      <span className={`page__filterOption ${activeFilter === 'ingredients' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/byingredient')}>By Ingredient</span>
-      <span className={`page__filterOption ${activeFilter === 'regions' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/byregion')}>By Region</span>
+      <span className={`page__filterOption ${activeFilter === 'ingredients' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/by-ingredient')}>By Ingredient</span>
+      <span className={`page__filterOption ${activeFilter === 'regions' ? "page__filterActive" : ""}`} onClick={() => goToFilter('/by-region')}>By Region</span>
     </React.Fragment>
   );
 
