@@ -31,6 +31,10 @@ html {
     --paragraph-line-height: 3rem;
     --recipe-content-margin: 2rem 0;
   }
+
+  .recipeDetails__mealImage {
+    display: none;
+  }
 }
 
 .App {
