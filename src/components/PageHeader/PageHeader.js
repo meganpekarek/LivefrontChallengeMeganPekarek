@@ -41,7 +41,9 @@ function PageHeader(props) {
     <React.Fragment>
       <div className="page__headerWrapper">
         {loc.pathname === '/recipes' && (
-          <img className="page__backArrow app__backArrow" src={BackArrow} onClick={goBack} alt="go back" />
+          <button className="page__backArrow app__backArrow" onClick={goBack}>
+            <img className="app__backArrowImg" src={BackArrow} alt="go back" />
+          </button>
         )}
         <header className="page__headerText">MY <img className="page__headerLogo" src={Logo} alt="my meal logo" /> MEAL</header>
         <div className="page__filtersWrapper">

@@ -13,10 +13,12 @@ html {
   --header-y-padding: 5rem;
   --subheader-font-size: 2.5rem;
   --side-page-padding: 7rem;
+  --side-header-padding: 7rem;
   --back-arrow-width: 2rem;
   --paragraph-font-size: 2rem;
   --paragraph-line-height: 4rem;
   --recipe-content-margin: 0;
+  --recipe-title-margin-left: 4rem;
   font-size: 62.5%;
 }
 
@@ -30,6 +32,8 @@ html {
     --paragraph-font-size: 1.6rem;
     --paragraph-line-height: 3rem;
     --recipe-content-margin: 2rem 0;
+    --recipe-title-margin-left: 2rem;
+    --side-header-padding: 2rem;
   }
 
   .recipeDetails__mealImage {
@@ -43,8 +47,14 @@ html {
 
 .app__backArrow {
   cursor: pointer;
-  width: var(--back-arrow-width);
+  width: auto;
   padding: 0 1.2rem;
+  border: none;
+  background: none;
+}
+
+.app__backArrowImg {
+  width: var(--back-arrow-width);
 }
 
 .app__cardsWrapper {
@@ -71,7 +81,7 @@ html {
 
 .recipeDetails__headerWrapper {
   background: var(--color-primary);
-  padding: 4rem var(--side-page-padding);
+  padding: 4rem var(--side-header-padding);
   margin: 5% 0;
   display: flex;
   align-items: center;
@@ -80,7 +90,7 @@ html {
 .recipeDetails__headerText {
   font-family: var(--font-family-primary);
   font-size: var(--header-font-size);
-  margin-left: 4rem;
+  margin-left: var(--recipe-title-margin-left);
 }
 
 .recipeDetails__contentWrapper {

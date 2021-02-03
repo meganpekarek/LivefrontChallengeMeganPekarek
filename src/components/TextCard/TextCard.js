@@ -15,13 +15,9 @@ function TextCard(props) {
   };
 
   return (
-    <React.Fragment>
-      <div className="textCard__wrapper" onClick={goToRecipes}>
-        <div>
+      <div role="button" className="textCard__wrapper" onClick={goToRecipes}>
           <header className="textCard__header">{cardText}</header>
-        </div>
       </div>
-    </React.Fragment>
   );
 };
 
