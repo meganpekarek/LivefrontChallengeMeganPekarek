@@ -58,6 +58,17 @@
   font-family: var(--font-family-secondary);
   font-weight: bold;
   font-size: var(--subheader-font-size);
+  transform: scale(1);
+  transition: transform .2s ease-in;
+}
+
+.page__filterOption:hover {
+  transform: scale(1.05);
+}
+
+.page__subHeaderText {
+  margin: 0 2em;
+  text-align: center;
 }
 
 .page__filterActive {

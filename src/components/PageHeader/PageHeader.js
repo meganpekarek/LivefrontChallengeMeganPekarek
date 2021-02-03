@@ -27,7 +27,7 @@ function PageHeader(props) {
   };
 
   const subheader = props.subheader ? (
-    <span className="page__filterOption">{props.subheader}</span>
+    <span className="page__subHeaderText">{props.subheader}</span>
   ) : (
     <React.Fragment>
       <button

@@ -49,7 +49,7 @@ describe("PageHeader", () => {
         </header>
       )
     ).toEqual(true);
-    expect(pageHeader.find(".page__filterOption").text()).toEqual(
+    expect(pageHeader.find(".page__subHeaderText").text()).toEqual(
       "testSubheader"
     );
   });
