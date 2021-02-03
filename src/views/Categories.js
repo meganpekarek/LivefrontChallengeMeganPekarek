@@ -23,7 +23,7 @@ function Categories(props) {
   if (!loading) {
     cards = (
       categories.map(category => (
-        <CategoryCard key={category.idCategory} category={category} history={props.history}></CategoryCard>
+        <CategoryCard key={category.idCategory} category={category} history={props.history} />
       ))
     );
   };

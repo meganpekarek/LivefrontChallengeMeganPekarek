@@ -24,7 +24,7 @@ function ByRegion(props) {
     if (!loading) {
         cards = (
             regions.map(region => (
-                <TextCard key={region.strArea} cardText={region.strArea} queryParamType="a=" history={props.history}></TextCard>
+                <TextCard key={region.strArea} cardText={region.strArea} queryParamType="a=" history={props.history} />
             ))
         )
     };

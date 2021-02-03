@@ -39,7 +39,7 @@ function Recipes(props) {
     if (recipes && recipes.length > 0) {
       cards = (
         recipes.map(recipe => (
-          <RecipeCard key={recipe.idMeal} recipe={recipe} history={props.history}></RecipeCard>
+          <RecipeCard key={recipe.idMeal} recipe={recipe} history={props.history} />
         ))
       );
     } else {

@@ -36,7 +36,7 @@ function ByIngredient(props) {
 
         cards = (
             sortedIngredients.map(ingredient => (
-                <TextCard key={ingredient.idIngredient} cardText={ingredient.strIngredient} queryParamType="i=" history={props.history}></TextCard>
+                <TextCard key={ingredient.idIngredient} cardText={ingredient.strIngredient} queryParamType="i=" history={props.history} />
             ))
         );
     };
