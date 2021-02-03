@@ -19,6 +19,7 @@ html {
   --paragraph-line-height: 4rem;
   --recipe-content-margin: 0;
   --recipe-title-margin-left: 4rem;
+  --recipe-header-margin: 5% 0;
   font-size: 62.5%;
 }
 
@@ -34,6 +35,7 @@ html {
     --recipe-content-margin: 2rem 0;
     --recipe-title-margin-left: 2rem;
     --side-header-padding: 2rem;
+    --recipe-header-margin: 0;
   }
 
   .recipeDetails__mealImage {
@@ -95,7 +97,7 @@ html {
 .recipeDetails__headerWrapper {
   background: var(--color-primary);
   padding: 4rem var(--side-header-padding);
-  margin: 5% 0;
+  margin: var(--recipe-header-margin);
   display: flex;
   align-items: center;
 }
